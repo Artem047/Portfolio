@@ -65,16 +65,12 @@ const Home = () => {
       </motion.h3>
       <motion.div
         className="flex mt-10 justify-between"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 1, y: 1000 }}
+        animate={{ y: 0 }}
         transition={{
           duration: 1,
-          scale: {
-            type: "spring",
-            damping: 5,
-            stiffness: 100,
-            restDelta: 0.001,
-          },
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
         }}>
         {dataImage.map((data, index) => {
           return (
