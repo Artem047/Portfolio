@@ -1,8 +1,8 @@
 import Typewriter from "typewriter-effect";
 import memoji from "../assets/images/Memoji.png";
-import dataImage from "../utils/data/image.json";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { dataImage } from "./../utils/dataImage";
 
 const Home = () => {
   return (
@@ -65,12 +65,16 @@ const Home = () => {
       </motion.h3>
       <motion.div
         className="flex mt-10 justify-between"
-        initial={{ opacity: 1, y: 1000 }}
-        animate={{ y: 0 }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{
           duration: 1,
-          delay: 0.5,
-          ease: [0, 0.71, 0.2, 1.01],
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001,
+          },
         }}>
         {dataImage.map((data, index) => {
           return (
