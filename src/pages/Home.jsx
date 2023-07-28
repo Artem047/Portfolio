@@ -57,7 +57,12 @@ const Home = () => {
         </div>
         <img src={memoji} alt="" />
       </motion.div>
-      <h3 className="text-5xl text-center">Teck Stack</h3>
+      <motion.h3
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-5xl text-center">
+        Teck Stack
+      </motion.h3>
       <motion.div
         className="flex mt-10 justify-between"
         initial={{ opacity: 0, scale: 0.5 }}
