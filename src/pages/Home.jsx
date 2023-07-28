@@ -2,11 +2,20 @@ import Typewriter from "typewriter-effect";
 import memoji from "../assets/images/Memoji.png";
 import dataImage from "../utils/data/image.json";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <div className="w-full h-full px-[200px] text-white pt-[150px]">
-      <div className="flex">
+      <motion.div
+        className="flex"
+        initial={{ opacity: 1, x: -2000 }}
+        animate={{ x: 0 }}
+        transition={{
+          duration: 2,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}>
         <div>
           <div className="text-5xl mt-12">
             Hi there, I am
@@ -14,7 +23,8 @@ const Home = () => {
               <Typewriter
                 options={{ loop: true }}
                 onInit={(tw) => {
-                  tw.typeString("Artem Glebov👋")
+                  tw.pauseFor(2000)
+                    .typeString("Artem Glebov👋")
                     .start()
                     .pauseFor(3000)
                     .deleteAll()
@@ -46,15 +56,27 @@ const Home = () => {
           </div>
         </div>
         <img src={memoji} alt="" />
-      </div>
+      </motion.div>
       <h3 className="text-5xl text-center">Teck Stack</h3>
-      <div className="flex mt-10 justify-between">
+      <motion.div
+        className="flex mt-10 justify-between"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 1,
+          scale: {
+            type: "spring",
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001,
+          },
+        }}>
         {dataImage.map((data, index) => {
           return (
             <img src={data.image} alt="" key={index} className="max-w-full" />
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };

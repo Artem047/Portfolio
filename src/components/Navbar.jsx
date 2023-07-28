@@ -1,8 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="max-w-full w-full pt-7 flex items-center justify-between">
+    <motion.nav
+      className="max-w-full w-full pt-7 flex items-center justify-between"
+      initial={{ opacity: 1, y: -1000 }}
+      animate={{ y: 0 }}
+      transition={{
+        duration: 1,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}>
       <Link to="/" className="pl-6 text-xl">
         <b className="text-[#a05f5f]">AG</b>
       </Link>
@@ -27,7 +36,7 @@ const Navbar = () => {
           </button>
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
