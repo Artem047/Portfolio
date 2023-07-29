@@ -6,7 +6,7 @@ import { dataImage } from "./../utils/dataImage";
 
 const Home = () => {
   return (
-    <div className="w-full h-full px-[200px] text-white pt-[150px]">
+    <div className="w-full px-[200px] h-screen text-white pt-[150px]" id="home">
       <motion.div
         className="flex"
         initial={{ opacity: 1, x: -2000 }}
@@ -40,7 +40,7 @@ const Home = () => {
             test of time, providing a delightful user experience.
           </p>
           <p className="text-2xl text-[#a05f5f] font-bold mt-8">
-            Let's work together?
+            Let`s work together?
           </p>
           <div className="mt-7 flex gap-4">
             <Link>
