@@ -1,6 +1,7 @@
 import me from "../assets/images/Me.png";
 import { FaBirthdayCake } from "react-icons/fa";
 import { IoLocationSharp, IoMail } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -33,7 +34,7 @@ const About = () => {
             Tailwind and SCSS, I build engaging, user-centric websites. Let's
             embark on this exciting journey of innovation together!
           </p>
-          <div className="pt-[100px] flex gap-10 justify-center">
+          <div className="pt-[100px] flex gap-10">
             <button className="flex items-center">
               <FaBirthdayCake size={35} color="black" />
               <p className="text-2xl">January 30, 2004</p>
@@ -44,12 +45,12 @@ const About = () => {
             </button>
             <button className="flex items-center">
               <IoMail size={35} color="black" />
-              <a
-                href="email:glebov.as047@gmail.com"
+              <Link
+                to="email:glebov.as047@gmail.com"
                 target="blank"
                 className="text-2xl underline">
                 glebov.as047@gmail.com
-              </a>
+              </Link>
             </button>
           </div>
         </div>

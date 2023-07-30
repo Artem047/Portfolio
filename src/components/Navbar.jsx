@@ -2,6 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const handleClkAbout = (e) => {
+    e.preventDefault();
+    const about = document.getElementById("about");
+    about.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClkProj = (e) => {
+    e.preventDefault();
+    const project = document.getElementById("project");
+    project.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClkContact = (e) => {
+    e.preventDefault();
+    const contact = document.getElementById("contact");
+    contact.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <motion.nav
       className="max-w-full w-full pt-7 flex items-center justify-between"
@@ -19,13 +34,13 @@ const Navbar = () => {
         <NavLink to="">
           <b className="text-[#a05f5f]">Home</b>
         </NavLink>
-        <NavLink to="">
+        <NavLink to="" onClick={handleClkAbout}>
           <b className="text-[#a05f5f]">About</b>
         </NavLink>
-        <NavLink to="">
+        <NavLink to="" onClick={handleClkProj}>
           <b className="text-[#a05f5f]">Project</b>
         </NavLink>
-        <NavLink to="">
+        <NavLink to="" onClick={handleClkContact}>
           <b className="text-[#a05f5f]">Contact</b>
         </NavLink>
       </div>

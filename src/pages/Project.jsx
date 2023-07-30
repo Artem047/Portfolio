@@ -2,11 +2,10 @@ import { Link } from "react-router-dom";
 import { dataWorks } from "../utils/dataWorks";
 import { BsGithub } from "react-icons/bs";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { data } from "autoprefixer";
 
 const Project = () => {
   return (
-    <div className="w-full h-screen px-[100px]" id="project">
+    <div className="w-full h-full px-[100px]" id="project">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .portfolio
       </h1>
@@ -61,7 +60,7 @@ const Project = () => {
             .concat(
               data.tuning.map((dat, index) => {
                 return (
-                  <div className="flex pt-[100px]" key={index}>
+                  <div className="flex py-[100px]" key={index}>
                     <div className="pt-10">
                       <h3 className="text-5xl text-[#a05f5f] font-bold text-center">
                         {dat.heading}
