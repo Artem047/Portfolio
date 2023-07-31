@@ -9,7 +9,7 @@ const Project = () => {
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .portfolio
       </h1>
-      <h2 className="text-white text-4xl text-center pt-5 bglat:text-3xl">
+      <h2 className="text-white text-4xl text-center pt-5 bglat:text-3xl lat:text-2xl">
         Each project is unique piece of development
       </h2>
       <div className="flex flex-col">
@@ -17,7 +17,9 @@ const Project = () => {
           return data.consulting
             .map((dat, index) => {
               return (
-                <div className="flex pt-[100px]" key={index}>
+                <div
+                  className="flex pt-[100px] lat:pt-10 lat:flex-col lat:items-center"
+                  key={index}>
                   <img
                     src={dat.image}
                     alt=""
@@ -41,7 +43,7 @@ const Project = () => {
                         );
                       })}
                     </div>
-                    <div className="flex gap-10 justify-center pt-10">
+                    <div className="flex gap-10 justify-center py-10">
                       <Link
                         to="https://github.com/Artem047/GD_Consulting"
                         target="blank">
@@ -66,7 +68,9 @@ const Project = () => {
             .concat(
               data.tuning.map((dat, index) => {
                 return (
-                  <div className="flex py-[100px]" key={index}>
+                  <div
+                    className="flex py-[100px] lat:pt-10 lat:flex-col-reverse lat:items-center"
+                    key={index}>
                     <div className="pt-10">
                       <h3 className="text-5xl text-[#a05f5f] font-bold text-center bglat:text-4xl">
                         {dat.heading}

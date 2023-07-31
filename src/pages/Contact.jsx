@@ -10,11 +10,11 @@ const Contact = () => {
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .contact
       </h1>
-      <div className="flex gap-10 pt-14">
+      <div className="flex gap-10 pt-14 lat:flex-col">
         <div>
-          <h2 className="text-5xl text-white font-bold bglat:text-4xl">
+          <h2 className="text-5xl text-white font-bold bglat:text-4xl lat:text-center">
             Get in Touch
-          </h2>{" "}
+          </h2>
           <br />
           <p className="text-2xl text-white bglat:text-xl">
             Welcome to the contact page! If you have any questions or
@@ -26,7 +26,7 @@ const Contact = () => {
             Please fill out the contact form below and I will reply to you as
             soon as possible.
           </p>
-          <button className="flex items-center pt-10 bglat:pt-5">
+          <button className="flex items-center pt-10 bglat:pt-5 lat:mx-auto">
             <IoMail size={35} />
             <Link
               to="email:glebov.as047@gmail.com"
@@ -35,7 +35,7 @@ const Contact = () => {
               glebov.as047@gmail.com
             </Link>
           </button>
-          <div className="pt-10 flex gap-10">
+          <div className="pt-10 flex gap-10 lat:justify-center">
             <button className="w-[50px] text-white h-[50px] bg-[#00A3FF] hover:bg-white hover:text-[#00A3FF]">
               <Link
                 to="https://podolsk.hh.ru/resume/0280e604ff0b8fdd0a0039ed1f303764526569"

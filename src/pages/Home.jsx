@@ -17,7 +17,7 @@ const Home = () => {
   };
   return (
     <div
-      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px]"
+      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px] lat:px-12"
       id="home">
       <motion.div
         className="flex"
@@ -67,7 +67,11 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <img src={memoji} alt="" className="bglat:w-[400px]" />
+        <img
+          src={memoji}
+          alt=""
+          className="bglat:w-[400px] lat:w-[300px] h-full"
+        />
       </motion.div>
       <motion.h3
         initial={{ opacity: 0 }}

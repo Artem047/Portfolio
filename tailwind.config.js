@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {},
     screens: {
-      bglat: { min: "1024px", max: "1365px" },
-      lat: { min: "769px", max: "1024px" },
-      tab: { min: "321px", max: "768px" },
+      bglat: { max: "1365px" },
+      lat: { max: "1024px" },
+      tab: { max: "768px" },
     },
   },
   plugins: [],
