@@ -36,11 +36,11 @@ const Home = () => {
                 options={{ loop: true }}
                 onInit={(tw) => {
                   tw.pauseFor(2000)
-                    .typeString("Artem Glebov👋")
+                    .typeString("Artem Glebov")
                     .start()
                     .pauseFor(3000)
                     .deleteAll()
-                    .typeString("Frontend Developer💻")
+                    .typeString("Frontend Developer")
                     .pauseFor(3000);
                 }}
               />
