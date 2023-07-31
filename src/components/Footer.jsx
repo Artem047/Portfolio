@@ -38,7 +38,7 @@ const Footer = () => {
           </Link>
         </button>
       </div>
-      <p className="text-center text-2xl pt-5">
+      <p className="text-center text-2xl pt-5 tab:text-base">
         ©️2023 Artem Glebov. All rights reserved
       </p>
     </div>

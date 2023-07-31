@@ -5,11 +5,13 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Project = () => {
   return (
-    <div className="w-full h-full px-[100px] bglat:px-[50px]" id="project">
+    <div
+      className="w-full h-full px-[100px] bglat:px-[50px] tab:px-0"
+      id="project">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .portfolio
       </h1>
-      <h2 className="text-white text-4xl text-center pt-5 bglat:text-3xl lat:text-2xl">
+      <h2 className="text-white text-4xl text-center pt-5 bglat:text-3xl lat:text-2xl tab:text-xl">
         Each project is unique piece of development
       </h2>
       <div className="flex flex-col">
@@ -29,7 +31,7 @@ const Project = () => {
                     <h3 className="text-5xl text-[#a05f5f] font-bold text-center bglat:text-4xl">
                       {dat.heading}
                     </h3>
-                    <p className="text-2xl text-white pt-5 bglat:text-xl">
+                    <p className="text-2xl text-white pt-5 bglat:text-xl tab:text-base tab:pt-0">
                       {dat.text}
                     </p>
                     <div className="flex gap-10 justify-center pt-10 bglat:pt-5">
@@ -43,7 +45,7 @@ const Project = () => {
                         );
                       })}
                     </div>
-                    <div className="flex gap-10 justify-center py-10">
+                    <div className="flex gap-10 justify-center py-10 tab:flex-col tab:py-5 tab:gap-5 tab:items-center">
                       <Link
                         to="https://github.com/Artem047/GD_Consulting"
                         target="blank">
@@ -75,7 +77,7 @@ const Project = () => {
                       <h3 className="text-5xl text-[#a05f5f] font-bold text-center bglat:text-4xl">
                         {dat.heading}
                       </h3>
-                      <p className="text-2xl text-white pt-5 bglat:text-xl">
+                      <p className="text-2xl text-white pt-5 bglat:text-xl tab:text-base tab:pt-0">
                         {dat.text}
                       </p>
                       <div className="flex gap-10 justify-center pt-10 bglat:pt-5">
@@ -89,7 +91,7 @@ const Project = () => {
                           );
                         })}
                       </div>
-                      <div className="flex gap-10 justify-center pt-10">
+                      <div className="flex gap-10 justify-center pt-10 tab:flex-col tab:py-5 tab:gap-5 tab:items-center">
                         <Link
                           to="https://github.com/Artem047/just-tuning"
                           target="blank">
