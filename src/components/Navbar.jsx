@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { BiMenu } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
@@ -43,30 +42,22 @@ const Navbar = () => {
     closeModal();
   };
   return (
-    <motion.nav
-      className="max-w-full w-full pt-7 flex items-center justify-between tab:fixed tab:bg-[#5f9ea0] tab:z-50"
-      initial={{ opacity: 1, y: -1000 }}
-      animate={{ y: 0 }}
-      transition={{
-        duration: 1,
-        delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01],
-      }}>
+    <nav className="max-w-full w-full pt-7 flex items-center justify-between tab:fixed tab:bg-[#5f9ea0] tab:z-50">
       <Link to="/" className="pl-6 text-xl tab:text-3xl tab:pl-2">
         <b className="text-[#a05f5f]">AG</b>
       </Link>
-      <div className="flex gap-12 text-xl tab:hidden">
+      <div className="flex gap-12 text-2xl tab:hidden">
         <NavLink to="">
-          <b className="text-[#a05f5f]">Home</b>
+          <b className="text-[#a05f5f] nav_hover">Home</b>
         </NavLink>
         <NavLink to="" onClick={handleClkAbout}>
-          <b className="text-[#a05f5f]">About</b>
+          <b className="text-[#a05f5f] nav_hover">About</b>
         </NavLink>
         <NavLink to="" onClick={handleClkProj}>
-          <b className="text-[#a05f5f]">Project</b>
+          <b className="text-[#a05f5f] nav_hover">Project</b>
         </NavLink>
         <NavLink to="" onClick={handleClkContact}>
-          <b className="text-[#a05f5f]">Contact</b>
+          <b className="text-[#a05f5f] nav_hover">Contact</b>
         </NavLink>
       </div>
       <div>
@@ -130,7 +121,7 @@ const Navbar = () => {
           />
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 
