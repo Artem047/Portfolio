@@ -17,10 +17,10 @@ const Home = () => {
   };
   return (
     <div
-      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px] lat:px-12"
+      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px] lat:px-12 tab:px-3 tab:pt-[100px]"
       id="home">
       <motion.div
-        className="flex"
+        className="flex tab:flex-col-reverse tab:items-center"
         initial={{ opacity: 1, x: -2000 }}
         animate={{ x: 0 }}
         transition={{
@@ -29,7 +29,7 @@ const Home = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}>
         <div>
-          <div className="text-5xl mt-12 bglat:text-4xl">
+          <div className="text-5xl mt-12 bglat:text-4xl tab:text-center tab:mt-5 tab:text-3xl">
             Hi there, I am
             <b className="text-[#a05f5f]">
               <Typewriter
@@ -46,22 +46,22 @@ const Home = () => {
               />
             </b>
           </div>
-          <p className="text-2xl pt-6 bglat:text-xl bglat:pt-4">
+          <p className="text-2xl pt-6 bglat:text-xl bglat:pt-4 tab:text-base">
             As a Frontend Architect, my mission is to build a robust code
             foundation for interactive and user-friendly websites that stand the
             test of time, providing a delightful user experience.
           </p>
-          <p className="text-2xl text-[#a05f5f] font-bold mt-8 bglat:text-xl bglat:mt-5">
+          <p className="text-2xl text-[#a05f5f] font-bold mt-8 bglat:text-xl bglat:mt-5 tab:text-center tab:mt-0">
             Let`s work together?
           </p>
-          <div className="mt-7 flex gap-4">
+          <div className="mt-7 flex gap-4 tab:justify-center tab:mt-3">
             <Link onClick={handleClkContact}>
-              <button className="w-[230px] h-[70px] border-2 rounded-[45px] border-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl">
+              <button className="w-[230px] h-[70px] border-2 rounded-[45px] border-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl tab:w-[150px] tab:text-lg">
                 GET IN TOUCH
               </button>
             </Link>
             <Link onClick={handleClkProj}>
-              <button className="w-[230px] h-[70px] rounded-[45px] bg-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl">
+              <button className="w-[230px] h-[70px] rounded-[45px] bg-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl tab:w-[150px] tab:text-lg">
                 VIEW MY WORK
               </button>
             </Link>
@@ -76,11 +76,11 @@ const Home = () => {
       <motion.h3
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-5xl text-center mt-5 bglat:text-4xl">
+        className="text-5xl text-center mt-5 bglat:text-4xl tab:text-3xl">
         Teck Stack
       </motion.h3>
       <motion.div
-        className="flex mt-10 justify-between"
+        className="flex mt-10 justify-between tab:mt-5 tab:flex-wrap tab:gap-6"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
@@ -98,7 +98,7 @@ const Home = () => {
               src={data.image}
               alt=""
               key={index}
-              className="max-w-full bglat:w-[70px]"
+              className="max-w-full bglat:w-[70px] tab:w-[50px]"
             />
           );
         })}

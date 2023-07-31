@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import { HiArrowUp } from "react-icons/hi";
+import { useArrowContext } from "./ArrowContext";
 
 const Footer = () => {
+  const { showArrow } = useArrowContext();
+
   const handleClk = () => {
     window.scrollTo({ behavior: "smooth", top: 0, left: 0 });
   };
   return (
-    <div className="w-full h-[150px] mt-[200px] bg-[#FFFFFF70] relative">
-      <HiArrowUp
-        onClick={handleClk}
-        size={50}
-        className="absolute top-[-30px] right-40 cursor-pointer"
-      />
+    <div className="w-full h-[150px] mt-[200px] bg-[#FFFFFF70]">
+      {showArrow && (
+        <div className="relative">
+          <HiArrowUp
+            onClick={handleClk}
+            size={50}
+            className="bottom-0 right-40 cursor-pointer absolute"
+          />
+        </div>
+      )}
       <div className="flex gap-10 justify-center pt-8">
         <button className="w-[50px] h-[50px] bg-white rounded-xl text-2xl text-[#00A3FF] font-bold hover:bg-[#00A3FF] hover:text-white">
           <Link
