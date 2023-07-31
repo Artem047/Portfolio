@@ -4,7 +4,9 @@ import { IoLocationSharp } from "react-icons/io5";
 
 const About = () => {
   return (
-    <div className="px-[100px] w-full h-screen lat:px-0 tab:mt-40" id="about">
+    <div
+      className="px-[100px] w-full h-screen lat:px-0 tab:h-full tab:my-20"
+      id="about">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">.about</h1>
       <div className="flex gap-5 pt-[100px] lat:flex-col lat:items-center lat:pt-10">
         <img src={me} alt="" className="w-full h-full bglat:w-[400px]" />

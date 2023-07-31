@@ -17,7 +17,7 @@ const Home = () => {
   };
   return (
     <div
-      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px] lat:px-12 tab:px-3 tab:pt-[100px]"
+      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px] lat:px-12 tab:px-3 tab:pt-[100px] tab:h-full"
       id="home">
       <motion.div
         className="flex tab:flex-col-reverse tab:items-center"
