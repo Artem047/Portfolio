@@ -6,24 +6,27 @@ import { FaAngleRight } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="w-full h-full px-[150px]" id="contact">
+    <div className="w-full h-full px-[150px] bglat:px-[50px]" id="contact">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .contact
       </h1>
       <div className="flex gap-10 pt-14">
         <div>
-          <h2 className="text-5xl text-white font-bold">Get in Touch</h2> <br />
-          <p className="text-2xl text-white">
+          <h2 className="text-5xl text-white font-bold bglat:text-4xl">
+            Get in Touch
+          </h2>{" "}
+          <br />
+          <p className="text-2xl text-white bglat:text-xl">
             Welcome to the contact page! If you have any questions or
             interesting projects related to Frontend development, I will be
             happy to listen to you.
           </p>
           <br />
-          <p className="text-2xl text-white">
+          <p className="text-2xl text-white bglat:text-xl">
             Please fill out the contact form below and I will reply to you as
             soon as possible.
           </p>
-          <button className="flex items-center pt-10">
+          <button className="flex items-center pt-10 bglat:pt-5">
             <IoMail size={35} />
             <Link
               to="email:glebov.as047@gmail.com"

@@ -5,11 +5,11 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Project = () => {
   return (
-    <div className="w-full h-full px-[100px]" id="project">
+    <div className="w-full h-full px-[100px] bglat:px-[50px]" id="project">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">
         .portfolio
       </h1>
-      <h2 className="text-white text-4xl text-center pt-5">
+      <h2 className="text-white text-4xl text-center pt-5 bglat:text-3xl">
         Each project is unique piece of development
       </h2>
       <div className="flex flex-col">
@@ -18,18 +18,24 @@ const Project = () => {
             .map((dat, index) => {
               return (
                 <div className="flex pt-[100px]" key={index}>
-                  <img src={dat.image} alt="" />
+                  <img
+                    src={dat.image}
+                    alt=""
+                    className="bglat:w-[500px] h-full"
+                  />
                   <div className="pt-10">
-                    <h3 className="text-5xl text-[#a05f5f] font-bold text-center">
+                    <h3 className="text-5xl text-[#a05f5f] font-bold text-center bglat:text-4xl">
                       {dat.heading}
                     </h3>
-                    <p className="text-2xl text-white pt-5">{dat.text}</p>
-                    <div className="flex gap-10 justify-center pt-10">
+                    <p className="text-2xl text-white pt-5 bglat:text-xl">
+                      {dat.text}
+                    </p>
+                    <div className="flex gap-10 justify-center pt-10 bglat:pt-5">
                       {dat.stack.map((s, index) => {
                         return (
                           <p
                             key={index}
-                            className="text-[#A05F5F] text-3xl font-bold">
+                            className="text-[#A05F5F] text-3xl font-bold bglat:text-2xl">
                             {s.stacks}
                           </p>
                         );
@@ -62,16 +68,18 @@ const Project = () => {
                 return (
                   <div className="flex py-[100px]" key={index}>
                     <div className="pt-10">
-                      <h3 className="text-5xl text-[#a05f5f] font-bold text-center">
+                      <h3 className="text-5xl text-[#a05f5f] font-bold text-center bglat:text-4xl">
                         {dat.heading}
                       </h3>
-                      <p className="text-2xl text-white pt-5">{dat.text}</p>
-                      <div className="flex gap-10 justify-center pt-10">
+                      <p className="text-2xl text-white pt-5 bglat:text-xl">
+                        {dat.text}
+                      </p>
+                      <div className="flex gap-10 justify-center pt-10 bglat:pt-5">
                         {dat.stack.map((s, index) => {
                           return (
                             <p
                               key={index}
-                              className="text-[#A05F5F] text-3xl font-bold">
+                              className="text-[#A05F5F] text-3xl font-bold bglat:text-2xl">
                               {s.stacks}
                             </p>
                           );
@@ -96,7 +104,11 @@ const Project = () => {
                         </Link>
                       </div>
                     </div>
-                    <img src={dat.image} alt="" />
+                    <img
+                      src={dat.image}
+                      alt=""
+                      className="bglat:w-[500px] h-full"
+                    />
                   </div>
                 );
               })

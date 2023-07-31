@@ -5,8 +5,20 @@ import { motion } from "framer-motion";
 import { dataImage } from "./../utils/dataImage";
 
 const Home = () => {
+  const handleClkContact = (e) => {
+    e.preventDefault();
+    const contact = document.getElementById("contact");
+    contact.scrollIntoView({ behavior: "smooth" });
+  };
+  const handleClkProj = (e) => {
+    e.preventDefault();
+    const project = document.getElementById("project");
+    project.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <div className="w-full px-[200px] h-screen text-white pt-[150px]" id="home">
+    <div
+      className="w-full px-[200px] h-screen text-white pt-[150px] bglat:px-[100px]"
+      id="home">
       <motion.div
         className="flex"
         initial={{ opacity: 1, x: -2000 }}
@@ -17,7 +29,7 @@ const Home = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}>
         <div>
-          <div className="text-5xl mt-12">
+          <div className="text-5xl mt-12 bglat:text-4xl">
             Hi there, I am
             <b className="text-[#a05f5f]">
               <Typewriter
@@ -34,33 +46,33 @@ const Home = () => {
               />
             </b>
           </div>
-          <p className="text-2xl pt-6">
+          <p className="text-2xl pt-6 bglat:text-xl bglat:pt-4">
             As a Frontend Architect, my mission is to build a robust code
             foundation for interactive and user-friendly websites that stand the
             test of time, providing a delightful user experience.
           </p>
-          <p className="text-2xl text-[#a05f5f] font-bold mt-8">
+          <p className="text-2xl text-[#a05f5f] font-bold mt-8 bglat:text-xl bglat:mt-5">
             Let`s work together?
           </p>
           <div className="mt-7 flex gap-4">
-            <Link>
-              <button className="w-[230px] h-[70px] border-2 rounded-[45px] border-[#a05f5f] text-2xl">
+            <Link onClick={handleClkContact}>
+              <button className="w-[230px] h-[70px] border-2 rounded-[45px] border-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl">
                 GET IN TOUCH
               </button>
             </Link>
-            <Link>
-              <button className="w-[230px] h-[70px] rounded-[45px] bg-[#a05f5f] text-2xl">
+            <Link onClick={handleClkProj}>
+              <button className="w-[230px] h-[70px] rounded-[45px] bg-[#a05f5f] text-2xl bglat:w-[180px] bglat:h-[50px] bglat:text-xl">
                 VIEW MY WORK
               </button>
             </Link>
           </div>
         </div>
-        <img src={memoji} alt="" />
+        <img src={memoji} alt="" className="bglat:w-[400px]" />
       </motion.div>
       <motion.h3
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-5xl text-center">
+        className="text-5xl text-center mt-5 bglat:text-4xl">
         Teck Stack
       </motion.h3>
       <motion.div
@@ -78,7 +90,12 @@ const Home = () => {
         }}>
         {dataImage.map((data, index) => {
           return (
-            <img src={data.image} alt="" key={index} className="max-w-full" />
+            <img
+              src={data.image}
+              alt=""
+              key={index}
+              className="max-w-full bglat:w-[70px]"
+            />
           );
         })}
       </motion.div>

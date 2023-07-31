@@ -1,16 +1,15 @@
 import me from "../assets/images/Me.png";
 import { FaBirthdayCake } from "react-icons/fa";
-import { IoLocationSharp, IoMail } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { IoLocationSharp } from "react-icons/io5";
 
 const About = () => {
   return (
     <div className="px-[100px] w-full h-screen" id="about">
       <h1 className="text-[#a05f5f] text-6xl font-bold text-center">.about</h1>
       <div className="flex gap-5 pt-[100px]">
-        <img src={me} alt="" className="w-full h-full" />
-        <div className="pt-[80px] text-white">
-          <h2 className="text-5xl">
+        <img src={me} alt="" className="w-full h-full bglat:w-[400px]" />
+        <div className="pt-[80px] text-white bglat:pt-0">
+          <h2 className="text-5xl bglat:text-4xl">
             Hi, I’m <b className="text-[#A05F5F]">Artem</b>
           </h2>
           <br />
@@ -34,23 +33,14 @@ const About = () => {
             Tailwind and SCSS, I build engaging, user-centric websites. Let's
             embark on this exciting journey of innovation together!
           </p>
-          <div className="pt-[100px] flex gap-10">
+          <div className="pt-[100px] flex gap-10 justify-center bglat:pt-12">
             <button className="flex items-center">
               <FaBirthdayCake size={35} color="black" />
-              <p className="text-2xl">January 30, 2004</p>
+              <p className="text-2xl bglat:text-xl">January 30, 2004</p>
             </button>
             <button className="flex items-center">
               <IoLocationSharp size={35} color="black" />
-              <p className="text-2xl">Moscow, Russia</p>
-            </button>
-            <button className="flex items-center">
-              <IoMail size={35} color="black" />
-              <Link
-                to="email:glebov.as047@gmail.com"
-                target="blank"
-                className="text-2xl underline">
-                glebov.as047@gmail.com
-              </Link>
+              <p className="text-2xl bglat:text-xl">Moscow, Russia</p>
             </button>
           </div>
         </div>
