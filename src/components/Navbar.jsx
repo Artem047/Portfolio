@@ -44,7 +44,7 @@ const Navbar = () => {
   };
   return (
     <motion.nav
-      className="max-w-full w-full pt-7 flex items-center justify-between tab:fixed tab:bg-[#5f9ea0]"
+      className="max-w-full w-full pt-7 flex items-center justify-between tab:fixed tab:bg-[#5f9ea0] tab:z-50"
       initial={{ opacity: 1, y: -1000 }}
       animate={{ y: 0 }}
       transition={{
