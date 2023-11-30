@@ -61,9 +61,9 @@ const Navbar = () => {
         </NavLink>
       </div>
       <div>
-        <a href="/src/files/Resume.pdf" download target="blank">
+        <a href="https://docs.google.com/document/d/1hCQySGY1ORO-isPXWFPGk1XVM2UareCS/edit?usp=sharing&ouid=114566911831569896258&rtpof=true&sd=true" target="blank">
           <button className="w-[250px] h-[50px] bg-[#a05f5f] rounded-[50px] text-center text-white text-2xl font-bold mr-6 tab:w-[200px] tab:text-xl tab:mr-0">
-            Download CV
+            Look CV
           </button>
         </a>
       </div>
